@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎧 Spelling Bee - Listen & Spell</title>
+    <style>
+      
+        
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header-icon">🎧</div>
+        <h1>Spelling Bee</h1>
+        <p class="subtitle">Listen carefully &amp; spell the word correctly</p>
+
+        <!-- Stats -->
+        <div class="stats-row">
+            <div class="stat-badge">
+                <span class="icon">✅</span> <span>Score:</span>
+                <span class="stat-value" id="scoreDisplay">0</span>
+            </div>
+            <div class="stat-badge">
+                <span class="icon">🎯</span> <span>Streak:</span>
+                <span class="stat-value" id="streakDisplay">0</span>
+            </div>
+            <div class="stat-badge">
+                <span class="icon">📝</span> <span>Words:</span>
+                <span class="stat-value" id="wordsAttempted">0</span>
+            </div>
+        </div>
+
+        <!-- Sound Visualizer -->
+        <div class="sound-visual" id="soundVisual">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+        <!-- Speak Button -->
+        <button class="btn-speak" id="btnSpeak" title="Click to hear the word">
+            <span class="speaker-icon">🔊</span> Play Word
+        </button>
+
+        <div class="speed-control">
+            <label for="speedRange">Sound speed</label>
+            <input type="range" id="speedRange" min="0.5" max="1.25" step="0.05" value="0.75">
+            <span id="speedValue">0.75x</span>
+        </div>
+
+        <!-- Input -->
+        <div class="input-group">
+            <div class="letter-fields" id="letterFields" aria-label="Type the word you hear"></div>
+            <button class="btn-check" id="btnCheck">Check ✓</button>
+        </div>
+
+        <!-- Feedback -->
+        <div class="feedback" id="feedback"></div>
+
+        <!-- Hint (reveals on wrong answer) -->
+        <div class="hint-text" id="hintText"></div>
+
+        <!-- Skip / New Word -->
+        <div class="actions-row">
+            <button class="btn-give-up" id="btnGiveUp">Give Up / Show Word</button>
+            <button class="btn-skip" id="btnSkip">🔄 Skip / New Word</button>
+        </div>
+    </div>
+
+    <script src="sciprt.js"></script>
+</body>
+</html>
